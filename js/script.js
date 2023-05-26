@@ -4,5 +4,9 @@ var cat = document.querySelector(".cat");
 console.log(cat);
 
 button.addEventListener("click", function () {
-  cat.classList.add("show");
+  if (cat.classList.contains("show")) {
+    cat.classList.remove("show");
+    button.innerText = "Wait, come back!";
+    button.classList.add ("disappear");
+  }
 });
